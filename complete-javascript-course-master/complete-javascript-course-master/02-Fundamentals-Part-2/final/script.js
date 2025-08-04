@@ -3,11 +3,11 @@
 
 ///////////////////////////////////////
 // Activating Strict Mode
-let hasDriversLicense = false;
-const passTest = true;
+// let hasDriversLicense = false;
+// const passTest = true;
 
-if (passTest) hasDriversLicense = true;
-if (hasDriversLicense) console.log('I can drive :D');
+// if (passTest) hasDriversLicense = true;
+// if (hasDriversLicense) console.log('I can drive :D');
 
 // const interface = 'Audio';
 // const private = 534;
@@ -22,16 +22,12 @@ if (hasDriversLicense) console.log('I can drive :D');
 // // calling / running / invoking function
 // logger();
 // logger();
-// a
 // logger();
 
 // function fruitProcessor(apples, oranges) {
 //   const juice = `Juice with ${apples} apples and ${oranges} oranges.`;
 //   return juice;
 // }
-
-
-// hey
 // const appleJuice = fruitProcessor(5, 0);
 // console.log(appleJuice);
 
@@ -61,10 +57,17 @@ if (hasDriversLicense) console.log('I can drive :D');
 /////////////////////////////////////
 // Arrow functions
 
-// const calcAge3 = birthYeah => 2037 - birthYeah;
-// const age3 = calcAge3(1991);
-// console.log(age3);
+// // Function expression
+const calcAge2 = function (birthYear) {
+  return 2037 - birthYear;
+}
 
+// Arrow functions
+const calcAge3 = birthYeah => 2037 - birthYeah;
+const age3 = calcAge3(1991);
+console.log(age3);
+
+// two parameter
 // const yearsUntilRetirement = (birthYeah, firstName) => {
 //   const age = 2037 - birthYeah;
 //   const retirement = 65 - age;
@@ -72,46 +75,47 @@ if (hasDriversLicense) console.log('I can drive :D');
 //   return `${firstName} retires in ${retirement} years`;
 // }
 
-// console.log(yearsUntilRetirement(1991, 'Jonas')); console.log(yearsUntilRetirement(1980, 'Bob'));
+console.log(yearsUntilRetirement(1991, 'Jonas')); 
+console.log(yearsUntilRetirement(1980, 'Bob'));
 
 
 ///////////////////////////////////////
 // Functions Calling Other Functions
-// function cutFruitPieces(fruit) {
-//   return fruit * 4;
-// }
+function cutFruitPieces(fruit) {
+  return fruit * 4;
+}
 
-// function fruitProcessor(apples, oranges) {
-//   const applePieces = cutFruitPieces(apples);
-//   const orangePieces = cutFruitPieces(oranges);
+function fruitProcessor(apples, oranges) {
+  const applePieces = cutFruitPieces(apples);
+  const orangePieces = cutFruitPieces(oranges);
 
-//   const juice = `Juice with ${applePieces} piece of apple and ${orangePieces} pieces of orange.`;
-//   return juice;
-// }
-// console.log(fruitProcessor(2, 3));
+  const juice = `Juice with ${applePieces} piece of apple and ${orangePieces} pieces of orange.`;
+  return juice;
+}
+console.log(fruitProcessor(2, 3));
 
 
 ///////////////////////////////////////
 // Reviewing Functions
-// const calcAge = function (birthYeah) {
-//   return 2037 - birthYeah;
-// }
+const calcAge = function (birthYeah) {
+  return 2037 - birthYeah;
+}
 
-// const yearsUntilRetirement = function (birthYeah, firstName) {
-//   const age = calcAge(birthYeah);
-//   const retirement = 65 - age;
+const yearsUntilRetirement = function (birthYeah, firstName) {
+  const age = calcAge(birthYeah);
+  const retirement = 65 - age;
 
-//   if (retirement > 0) {
-//     console.log(`${firstName} retires in ${retirement} years`);
-//     return retirement;
-//   } else {
-//     console.log(`${firstName} has already retired 🎉`);
-//     return -1;
-//   }
-// }
+  if (retirement > 0) {
+    console.log(`${firstName} retires in ${retirement} years`);
+    return retirement;
+  } else {
+    console.log(`${firstName} has already retired 🎉`);
+    return -1;
+  }
+}
 
-// console.log(yearsUntilRetirement(1991, 'Jonas'));
-// console.log(yearsUntilRetirement(1950, 'Mike'));
+console.log(yearsUntilRetirement(1991, 'Jonas'));
+console.log(yearsUntilRetirement(1950, 'Mike'));
 
 
 ///////////////////////////////////////
@@ -137,33 +141,33 @@ HINT: To check if number A is at least double number B, check for A >= 2 * B. Ap
 GOOD LUCK 😀
 */
 
-/*
-const calcAverage = (a, b, c) => (a + b + c) / 3;
-console.log(calcAverage(3, 4, 5));
 
-// Test 1
-let scoreDolphins = calcAverage(44, 23, 71);
-let scoreKoalas = calcAverage(65, 54, 49);
-console.log(scoreDolphins, scoreKoalas);
+// const calcAverage = (a, b, c) => (a + b + c) / 3;
+// console.log(calcAverage(3, 4, 5));
 
-const checkWinner = function (avgDolphins, avgKoalas) {
-  if (avgDolphins >= 2 * avgKoalas) {
-    console.log(`Dolphins win 🏆 (${avgDolphins} vs. ${avgKoalas})`);
-  } else if (avgKoalas >= 2 * avgDolphins) {
-    console.log(`Koalas win 🏆 (${avgKoalas} vs. ${avgDolphins})`);
-  } else {
-    console.log('No team wins...');
-  }
-}
-checkWinner(scoreDolphins, scoreKoalas);
+// // Test 1
+// let scoreDolphins = calcAverage(44, 23, 71);
+// let scoreKoalas = calcAverage(65, 54, 49);
+// console.log(scoreDolphins, scoreKoalas);
 
-checkWinner(576, 111);
+// const checkWinner = function (avgDolphins, avgKoalas) {
+//   if (avgDolphins >= 2 * avgKoalas) {
+//     console.log(`Dolphins win 🏆 (${avgDolphins} vs. ${avgKoalas})`);
+//   } else if (avgKoalas >= 2 * avgDolphins) {
+//     console.log(`Koalas win 🏆 (${avgKoalas} vs. ${avgDolphins})`);
+//   } else {
+//     console.log('No team wins...');
+//   }
+// }
+// checkWinner(scoreDolphins, scoreKoalas);
 
-// Test 2
-scoreDolphins = calcAverage(85, 54, 41);
-scoreKoalas = calcAverage(23, 34, 27);
-console.log(scoreDolphins, scoreKoalas);
-checkWinner(scoreDolphins, scoreKoalas);
+// checkWinner(576, 111);
+
+// // Test 2
+// scoreDolphins = calcAverage(85, 54, 41);
+// scoreKoalas = calcAverage(23, 34, 27);
+// console.log(scoreDolphins, scoreKoalas);
+// checkWinner(scoreDolphins, scoreKoalas);
 
 
 ///////////////////////////////////////
@@ -192,46 +196,51 @@ const jonas = [firstName, 'Schmedtmann', 2037 - 1991, 'teacher', friends];
 console.log(jonas);
 console.log(jonas.length);
 
-// Exercise
-const calcAge = function (birthYeah) {
-  return 2037 - birthYeah;
-}
-const years = [1990, 1967, 2002, 2010, 2018];
+// // Exercise
+// const calcAge = function (birthYeah) {
+//   return 2037 - birthYeah;
+// }
+// const years = [1990, 1967, 2002, 2010, 2018];
 
-const age1 = calcAge(years[0]);
-const age2 = calcAge(years[1]);
-const age3 = calcAge(years[years.length - 1]);
-console.log(age1, age2, age3);
+// const age1 = calcAge(years[0]);
+// const age2 = calcAge(years[1]);
+// const age3 = calcAge(years[years.length - 1]);
+// console.log(age1, age2, age3);
 
-const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])];
-console.log(ages);
+// const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])];
+// console.log(ages);
 
 
 ///////////////////////////////////////
 // Basic Array Operations (Methods)
 const friends = ['Michael', 'Steven', 'Peter'];
 
-// Add elements
+// Add elements last
 const newLength = friends.push('Jay');
 console.log(friends);
 console.log(newLength);
 
+// add element first
 friends.unshift('John');
 console.log(friends);
 
 // Remove elements
-friends.pop(); // Last
-const popped = friends.pop();
+friends.pop(); // Last index remove
+const popped = friends.pop(); // peter removed
 console.log(popped);
 console.log(friends);
 
+// remove from the first
 friends.shift(); // First
 console.log(friends);
 
+
+// position bole dibe 
 console.log(friends.indexOf('Steven'));
 console.log(friends.indexOf('Bob'));
 
-friends.push(23);
+friends.push(23); // last  a add kore
+// array te element ta ache kina ta bole dibe 
 console.log(friends.includes('Steven'));
 console.log(friends.includes('Bob'));
 console.log(friends.includes(23));
@@ -239,7 +248,7 @@ console.log(friends.includes(23));
 if (friends.includes('Steven')) {
   console.log('You have a friend called Steven');
 }
-*/
+
 
 ///////////////////////////////////////
 // Coding Challenge #2
@@ -259,17 +268,17 @@ HINT: Remember that an array needs a value in each position, and that value can 
 GOOD LUCK 😀
 */
 
-/*
-const calcTip = function (bill) {
-  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
-}
-// const calcTip = bill => bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 
-const bills = [125, 555, 44];
-const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
-const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+// const calcTip = function (bill) {
+//   return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+// }
+// // const calcTip = bill => bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 
-console.log(bills, tips, totals);
+// const bills = [125, 555, 44];
+// const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+// const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+
+// console.log(bills, tips, totals);
 
 
 ///////////////////////////////////////
@@ -282,6 +291,7 @@ const jonasArray = [
   ['Michael', 'Peter', 'Steven']
 ];
 
+// 5 key value pairs
 const jonas = {
   firstName: 'Jonas',
   lastName: 'Schmedtmann',
@@ -309,7 +319,7 @@ const nameKey = 'Name';
 console.log(jonas['first' + nameKey]);
 console.log(jonas['last' + nameKey]);
 
-// console.log(jonas.'last' + nameKey)
+console.log(jonas.'last' + nameKey)
 
 const interestedIn = prompt('What do you want to know about Jonas? Choose between firstName, lastName, age, job, and friends');
 
@@ -367,7 +377,7 @@ console.log(jonas.age);
 // Challenge
 // "Jonas is a 46-year old teacher, and he has a driver's license"
 console.log(jonas.getSummary());
-*/
+
 
 ///////////////////////////////////////
 // Coding Challenge #3
@@ -384,7 +394,7 @@ TEST DATA: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.9
 GOOD LUCK 😀
 */
 
-/*
+
 const mark = {
   fullName: 'Mark Miller',
   mass: 78,
@@ -422,16 +432,16 @@ if (mark.bmi > john.bmi) {
 ///////////////////////////////////////
 // Iteration: The for Loop
 
-// console.log('Lifting weights repetition 1 🏋️‍♀️');
-// console.log('Lifting weights repetition 2 🏋️‍♀️');
-// console.log('Lifting weights repetition 3 🏋️‍♀️');
-// console.log('Lifting weights repetition 4 🏋️‍♀️');
-// console.log('Lifting weights repetition 5 🏋️‍♀️');
-// console.log('Lifting weights repetition 6 🏋️‍♀️');
-// console.log('Lifting weights repetition 7 🏋️‍♀️');
-// console.log('Lifting weights repetition 8 🏋️‍♀️');
-// console.log('Lifting weights repetition 9 🏋️‍♀️');
-// console.log('Lifting weights repetition 10 🏋️‍♀️');
+console.log('Lifting weights repetition 1 🏋️‍♀️');
+console.log('Lifting weights repetition 2 🏋️‍♀️');
+console.log('Lifting weights repetition 3 🏋️‍♀️');
+console.log('Lifting weights repetition 4 🏋️‍♀️');
+console.log('Lifting weights repetition 5 🏋️‍♀️');
+console.log('Lifting weights repetition 6 🏋️‍♀️');
+console.log('Lifting weights repetition 7 🏋️‍♀️');
+console.log('Lifting weights repetition 8 🏋️‍♀️');
+console.log('Lifting weights repetition 9 🏋️‍♀️');
+console.log('Lifting weights repetition 10 🏋️‍♀️');
 
 // for loop keeps running while condition is TRUE
 for (let rep = 1; rep <= 30; rep++) {
@@ -538,7 +548,7 @@ while (dice !== 6) {
   dice = Math.trunc(Math.random() * 6) + 1;
   if (dice === 6) console.log('Loop is about to end...');
 }
-*/
+
 
 ///////////////////////////////////////
 // Coding Challenge #4
