@@ -22,6 +22,7 @@ if (hasDriversLicense) console.log('I can drive :D');
 // // calling / running / invoking function
 // logger();
 // logger();
+// a
 // logger();
 
 // function fruitProcessor(apples, oranges) {
@@ -29,6 +30,8 @@ if (hasDriversLicense) console.log('I can drive :D');
 //   return juice;
 // }
 
+
+// hey
 // const appleJuice = fruitProcessor(5, 0);
 // console.log(appleJuice);
 
